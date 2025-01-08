@@ -2,6 +2,7 @@ const express = require('express')
 const app = express();
 const messageRoutes = require('./routes/messageRoutes')
 
+const port = process.env.PORT || 3000
 
 
 app.set('view engine', 'ejs')
@@ -26,4 +27,4 @@ app.use((req,res) => {
 //  routes should be messages, messages/new, messages:index, and post route messages/new
 
 
-app.listen(3000);
+app.listen(port);
