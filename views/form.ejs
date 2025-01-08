@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<%- include('./partials/nav.ejs') %>
+
+<body>
+
+    <div class="form-box">
+        <h1>Add New Message</h1>
+    
+        <!-- Add a heading, 2 inputs (one for the author’s name and one for the message text) and a submit button. To have the form make a network request you will need to define it with both a method and an action like so (we will learn how to handle forms in a later lesson): -->
+    
+        <form method="post" action="/messages/new">
+            <p>Enter new message below:</p>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required />
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="message" required />
+            <button>Submit</button>
+    
+        </form>
+
+    </div>
+
+<%- include('./partials/footer.ejs') %>
+
+    <!-- <div class="footerWrap">
+        
+    </div> -->
+        
+</body>
+
+
+
+</html>
+
+

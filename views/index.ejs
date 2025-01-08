@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+
+    <%- include('./partials/nav.ejs') %>
+
+<body>
+
+    <!-- <% const name = 'dan' %> 
+     raw javascript -->
+
+     <!-- <%= name %>
+      output a variable -->
+
+      <!-- <%- include %>
+       ouput raw html -->
+
+   
+
+        <% messages.forEach((message,index) => { %>
+
+            <div class="message-box">
+                <p class="message-text"> <%= message.text %> </p>
+                <p class="author-name"> - <%= message.user %> </p>
+                <p class="message-date"> <%= message.added %> </p>
+                <!-- <p> index: <%= index %></p> -->
+                <a href="/messages/<%= index %>">See Details</a>
+            </div>
+
+        <% }) %>
+        
+    <a href="/messages/new" class="new-message-btn">Add New Message!</a>
+
+
+      <%- include('./partials/footer.ejs') %>
+</body>
+   
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<%- include('./partials/nav.ejs') %>
+
+<body>
+    
+  
+    <div class="form-box">
+        <h1>Message Details</h1>
+        <p class="message-text"> <%= messages[index].text %> </p>
+        <p class="author-name"> - <%= messages[index].user %> </p>
+        <p class="message-date"> <%= messages[index].added %> </p>
+
+    </div>
+
+        <%- include('./partials/footer.ejs') %>
+
+
+<!-- <div class="footerWrap">
+
+</div> -->
+
+
+</body>
+
+
+
+
+</html>
