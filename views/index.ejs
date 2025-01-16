@@ -15,24 +15,31 @@
       <!-- <%- include %>
        ouput raw html -->
 
-   
+    <% if(messages) { %>
 
-        <% messages.forEach((message,index) => { %>
+        <% messages.forEach((message) => { %>
 
             <div class="message-box">
                 <p class="message-text"> <%= message.text %> </p>
-                <p class="author-name"> - <%= message.user %> </p>
-                <p class="message-date"> <%= message.added %> </p>
-                <!-- <p> index: <%= index %></p> -->
-                <a href="/messages/<%= index %>">See Details</a>
+                <p class="author-name"> - <%= message.author %> </p>
+                <p class="message-date"> <%= message.addeddate %> </p>
+               
+                <a href="/messages/<%= message.id %>">See Details</a>
             </div>
 
-        <% }) %>
+        <% }) %> 
+    <% } else { %>
+        <div class="message-box">
+            <p class="message-text"> No messages to display. Click button below to add new message.</p>
+      
+        </div>
+    <% } %>
         
     <a href="/messages/new" class="new-message-btn">Add New Message!</a>
 
 
       <%- include('./partials/footer.ejs') %>
+
 </body>
    
 
